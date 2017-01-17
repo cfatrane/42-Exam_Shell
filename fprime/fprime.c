@@ -6,14 +6,14 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/17 13:17:23 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/17 13:17:43 by cfatrane         ###   ########.fr       */
+/*   Updated: 2017/01/17 13:24:27 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-int		main(int argc, char *argv[])
+int		main(int argc, char **argv)
 {
 	int i;
 	int num;
@@ -28,8 +28,8 @@ int		main(int argc, char *argv[])
 		}
 		while (1)
 		{
-			i = 1;
-			while (++i <= num)
+			i = 2;
+			while (i <= num)
 			{
 				if (num % i == 0)
 				{
@@ -37,6 +37,7 @@ int		main(int argc, char *argv[])
 					num = num / i;
 					break ;
 				}
+				i++;
 			}
 			if (num == 1)
 				break ;
