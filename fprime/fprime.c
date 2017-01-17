@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/17 13:17:23 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/17 13:24:27 by cfatrane         ###   ########.fr       */
+/*   Updated: 2017/01/17 13:28:42 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int		main(int argc, char **argv)
 				if (num % i == 0)
 				{
 					printf("%d", i);
-					num = num / i;
+					num /= i;
 					break ;
 				}
 				i++;
