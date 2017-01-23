@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/17 08:52:00 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/17 09:04:51 by cfatrane         ###   ########.fr       */
+/*   Updated: 2017/01/23 14:50:28 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,23 @@
 
 t_list	*sort_list(t_list* lst, int (*cmp)(int, int))
 {
-	int		overflow;
-	t_list	*tmp;
+	int		tempo;
+	t_list	*parcour;
 
-	tmp = lst;
+	parcour = lst;
 	while (lst->next)
 	{
 		if (((*cmp)(lst->data, lst->next->data)) == 0)
 		{
-			overflow = lst->data;
+			tempo = lst->data;
 			lst->data = lst->next->data;
-			lst->next->data = overflow;
-			lst = tmp;
+			lst->next->data = tempo;
+			lst = parcour;
 		}
 		else
 			lst = lst->next;
 	}
-	lst = tmp;
+	lst = parcour;
 	return (lst);
 }
 
